@@ -19,38 +19,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_margin="4dp"
         android:text="@string/login_username"
-        android:layout_margin="4dp"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/login_username"
         android:layout_margin="4dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:hint="@string/login_username" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:layout_margin="4dp"
         android:text="@string/login_password"
-        android:layout_margin="4dp"/>
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/login_password"
         android:layout_margin="4dp"
-        android:inputType="textPassword"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:hint="@string/login_password"
+        android:inputType="textPassword" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/login_button"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_button" />
 
 </LinearLayout>
