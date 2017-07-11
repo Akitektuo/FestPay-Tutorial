@@ -11,6 +11,11 @@ import android.widget.Toast;
 
 import com.javaconsumers.festpay.R;
 import com.javaconsumers.festpay.database.DatabaseManager;
+import com.javaconsumers.festpay.util.Preference;
+
+import static com.javaconsumers.festpay.util.Preference.KEY_EMAIL;
+import static com.javaconsumers.festpay.util.Preference.KEY_PASSWORD;
+import static com.javaconsumers.festpay.util.Preference.KEY_REMEBER;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -18,6 +23,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText editPassword;
     private CheckBox checkRemember;
     private DatabaseManager database;
+    private Preference preference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         buttonLogin.setOnClickListener(this);
         buttonRegister.setOnClickListener(this);
         database = new DatabaseManager(this);
+        preference = new Preference(this);
+        if (preference.getPreferenceBoolean(KEY_REMEBER)) {
+            if (database.loginUser(preference.getPreferenceString(KEY_EMAIL), preference.getPreferenceString(KEY_PASSWORD))) {
+                Toast.makeText(this, "Login successful.", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, MainActivity.class));
+                finish();
+            } else {
+                Toast.makeText(this, "Login failed.", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 
     @Override
@@ -39,6 +55,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.button_login:
                 if (database.loginUser(editEmail.getText().toString(), editPassword.getText().toString())) {
                     Toast.makeText(this, "Login successful.", Toast.LENGTH_SHORT).show();
+                    if (checkRemember.isChecked()) {
+                        preference.setPreference(KEY_REMEBER, true);
+                        preference.setPreference(KEY_EMAIL, editEmail.getText().toString());
+                        preference.setPreference(KEY_PASSWORD, editPassword.getText().toString());
+                    } else {
+                        preference.setPreference(KEY_REMEBER, false);
+                    }
                     startActivity(new Intent(this, MainActivity.class));
                     finish();
                 } else {

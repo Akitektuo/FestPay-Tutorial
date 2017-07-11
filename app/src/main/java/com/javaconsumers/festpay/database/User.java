@@ -4,18 +4,13 @@ package com.javaconsumers.festpay.database;
  * Created by AoD Akitektuo on 11-Jul-17 at 21:07.
  */
 
-public class User {
+class User {
 
     private int id;
     private String email;
     private String password;
 
-    public User(String email, String password) {
-        setEmail(email);
-        setPassword(password);
-    }
-
-    public User(int id, String email, String password) {
+    User(int id, String email, String password) {
         setId(id);
         setEmail(email);
         setPassword(password);
