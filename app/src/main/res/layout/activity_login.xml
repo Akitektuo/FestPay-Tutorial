@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.javaconsumers.festpay.LoginActivity">
+    tools:context="com.javaconsumers.festpay.activity.LoginActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
