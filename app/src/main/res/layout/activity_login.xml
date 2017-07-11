@@ -8,24 +8,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:background="@color/colorLightBlue"
+        android:layout_height="56dp"
+        android:background="@color/colorPrimary"
         android:elevation="4dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/app_name"
+            android:text="@string/fest_pay_login"
+            android:textColor="@color/colorAccent"
             android:textSize="24sp"
             android:textStyle="bold" />
-
-        <!--<Button-->
-        <!--android:layout_width="45dp"-->
-        <!--android:layout_height="45dp"-->
-        <!--android:layout_centerVertical="true"-->
-        <!--android:background="@drawable/back"-->
-        <!--android:layout_margin="4dp"/>-->
 
     </RelativeLayout>
 
@@ -38,66 +32,51 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="4dp"
-                android:text="@string/login_username"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
             <EditText
-                android:id="@+id/edit_login_username"
+                android:id="@+id/edit_login_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:gravity="center"
-                android:hint="@string/login_username" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_margin="4dp"
-                android:text="@string/login_password"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:hint="@string/login_email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorPrimary" />
 
             <EditText
-                android:id="@+id/edit_login_password"
+                android:id="@+id/edit_register_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:gravity="center"
                 android:hint="@string/login_password"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimary" />
 
             <Button
                 android:id="@+id/button_login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="@string/login_button" />
+                android:text="@string/login_button"
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/button_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="@string/register_button" />
+                android:text="@string/register_button"
+                android:textAllCaps="false" />
 
-            <TextView
-                android:id="@+id/text_forgot_password"
+            <CheckBox
+                android:id="@+id/check_remember"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="4dp"
-                android:text="@string/login_forgot_password"
-                android:textColor="@android:color/holo_blue_dark"
-                android:textStyle="bold" />
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/remember" />
 
         </LinearLayout>
 

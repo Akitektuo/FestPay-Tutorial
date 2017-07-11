@@ -1,8 +1,13 @@
 <resources>
     <string name="app_name">Fest Pay</string>
-    <string name="login_username">Username</string>
+    <string name="login_email">E-mail</string>
+    <string name="login_email_confirm">Confirm E-mail</string>
     <string name="login_password">Password</string>
+    <string name="login_password_confirm">Confirm Password</string>
     <string name="login_button">Login</string>
     <string name="register_button">Register</string>
     <string name="login_forgot_password"><u>Did you forgot your password?</u></string>
+    <string name="fest_pay_register">Fest Pay Register</string>
+    <string name="fest_pay_login">Fest Pay Login</string>
+    <string name="remember">Remember Me</string>
 </resources>
