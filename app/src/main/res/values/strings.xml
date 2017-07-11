@@ -10,4 +10,8 @@
     <string name="fest_pay_register">Fest Pay Register</string>
     <string name="fest_pay_login">Fest Pay Login</string>
     <string name="remember">Remember Me</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="new_password_confirm">Confirm New Password</string>
+    <string name="update_account">Update Account</string>
 </resources>

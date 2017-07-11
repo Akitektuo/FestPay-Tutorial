@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.javaconsumers.festpay.LoginActivity">
+    tools:context="com.javaconsumers.festpay.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/fest_pay_login"
+            android:text="@string/app_name"
             android:textColor="@color/colorAccent"
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -36,7 +36,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/edit_login_email"
+                android:id="@+id/edit_current_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
@@ -51,32 +51,37 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:gravity="center"
-                android:hint="@string/login_password"
+                android:hint="@string/old_password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_new_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:hint="@string/new_password"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimary" />
+
+            <EditText
+                android:id="@+id/edit_new_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="center"
+                android:hint="@string/new_password_confirm"
                 android:inputType="textPassword"
                 android:textColor="@color/colorPrimary" />
 
             <Button
-                android:id="@+id/button_login"
+                android:id="@+id/button_update_account"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:text="@string/login_button"
+                android:text="@string/update_account"
                 android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/button_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="4dp"
-                android:text="@string/register_button"
-                android:textAllCaps="false" />
-
-            <CheckBox
-                android:id="@+id/check_remember"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/colorPrimary"
-                android:text="@string/remember" />
 
         </LinearLayout>
 

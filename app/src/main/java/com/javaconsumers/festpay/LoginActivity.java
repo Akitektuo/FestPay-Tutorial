@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         editEmail = (EditText) findViewById(R.id.edit_login_email);
-        editPassword = (EditText) findViewById(R.id.edit_register_password);
+        editPassword = (EditText) findViewById(R.id.edit_old_password);
         checkRemember = (CheckBox) findViewById(R.id.check_remember);
         Button buttonLogin = (Button) findViewById(R.id.button_login);
         Button buttonRegister = (Button) findViewById(R.id.button_register);
