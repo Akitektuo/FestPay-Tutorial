@@ -4,7 +4,7 @@ package com.javaconsumers.festpay.database;
  * Created by AoD Akitektuo on 11-Jul-17 at 21:07.
  */
 
-class User {
+public class User {
 
     private int id;
     private String email;

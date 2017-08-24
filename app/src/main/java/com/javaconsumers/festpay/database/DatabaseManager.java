@@ -3,6 +3,9 @@ package com.javaconsumers.festpay.database;
 import android.content.Context;
 import android.database.Cursor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by AoD Akitektuo on 11-Jul-17 at 20:32.
  */
@@ -84,5 +87,17 @@ public class DatabaseManager {
         }
         cursor.close();
         return false;
+    }
+
+    public List<User> searchEmail(String email) {
+        Cursor cursor = getDatabase().getUserForSearch(email);
+        List<User> users = new ArrayList<>();
+        if (cursor.moveToFirst()) {
+            do {
+                users.add(new User(cursor.getInt(DatabaseContract.CURSOR_ID), cursor.getString(DatabaseContract.CURSOR_EMAIL), cursor.getString(DatabaseContract.CURSOR_PASSWORD)));
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        return users;
     }
 }

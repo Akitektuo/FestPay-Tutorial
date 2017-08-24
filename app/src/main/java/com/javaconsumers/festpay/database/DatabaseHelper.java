@@ -82,4 +82,13 @@ class DatabaseHelper extends SQLiteOpenHelper {
         return getReadableDatabase().query(DatabaseContract.UserContractEntry.TABLE_NAME, results, selection, selectionArgs, null, null, null);
     }
 
+    Cursor getUserForSearch(String email) {
+        String[] results = {DatabaseContract.UserContractEntry.COLUMN_ID,
+                DatabaseContract.UserContractEntry.COLUMN_EMAIL,
+                DatabaseContract.UserContractEntry.COLUMN_PASSWORD};
+        String selection = DatabaseContract.UserContractEntry.COLUMN_EMAIL + " LIKE ?";
+        String[] selectionArgs = {"%" + email + "%"};
+        return getReadableDatabase().query(DatabaseContract.UserContractEntry.TABLE_NAME, results, selection, selectionArgs, null, null, null);
+    }
+
 }

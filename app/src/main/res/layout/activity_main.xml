@@ -27,9 +27,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
+        android:orientation="vertical"
         android:padding="16dp">
 
         <LinearLayout
+            android:id="@+id/layout_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -84,6 +86,14 @@
                 android:textAllCaps="false" />
 
             <Button
+                android:id="@+id/button_search_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/search_account"
+                android:textAllCaps="false" />
+
+            <Button
                 android:id="@+id/button_logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,6 +102,55 @@
                 android:textAllCaps="false" />
 
         </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edit_search_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center"
+                    android:hint="@string/login_email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/text_search_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center_vertical" />
+
+                <Button
+                    android:id="@+id/button_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="@string/search"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/button_search_cancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 

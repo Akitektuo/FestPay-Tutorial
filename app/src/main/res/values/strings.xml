@@ -14,5 +14,8 @@
     <string name="new_password">New Password</string>
     <string name="new_password_confirm">Confirm New Password</string>
     <string name="update_account">Update Account</string>
+    <string name="search_account">Search Account</string>
     <string name="logout">Log Out</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
 </resources>
